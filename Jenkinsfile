@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('list') {
+    stage('check code') {
       steps {
-        sh 'sh \'ls -la\''
+        git(url: 'https://github.com/RShabbir53/my-nodejs-service.git', branch: 'main')
       }
     }
 
