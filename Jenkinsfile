@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('run') {
+      steps {
+        sh 'node server.js'
+      }
+    }
+
   }
 }
